@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Online Examination System</h2>
+</header>
+
+<div class="container">
+
+    <!-- LOGIN PAGE -->
+    <section id="login">
+        <h1>Student Login</h1>
+
+        <input type="text" id="name" placeholder="Enter Student Name">
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="login()">Login</button>
+        <p id="error"></p>
+    </section>
+
+    <!-- EXAM PAGE -->
+    <section id="exam" style="display:none">
+        <h1>Online Examination</h1>
+
+        <h3 id="welcome"></h3>
+        <h2>Time Left: <span id="timer">10:00</span></h2>
+
+        <form id="quiz">
+
+            <div class="question">
+                <p>1. What is the capital of India?</p>
+                <input type="radio" name="q1" value="0"> Mumbai<br>
+                <input type="radio" name="q1" value="1"> New Delhi<br>
+                <input type="radio" name="q1" value="2"> Chennai<br>
+                <input type="radio" name="q1" value="3"> Kolkata
+            </div>
+
+            <div class="question">
+                <p>2. Which planet is called the Red Planet?</p>
+                <input type="radio" name="q2" value="0"> Venus<br>
+                <input type="radio" name="q2" value="1"> Jupiter<br>
+                <input type="radio" name="q2" value="2"> Mars<br>
+                <input type="radio" name="q2" value="3"> Saturn
+            </div>
+
+            <div class="question">
+                <p>3. Which language is used to create web pages?</p>
+                <input type="radio" name="q3" value="0"> HTML<br>
+                <input type="radio" name="q3" value="1"> Python<br>
+                <input type="radio" name="q3" value="2"> C<br>
+                <input type="radio" name="q3" value="3"> SQL
+            </div>
+
+            <div class="question">
+                <p>4. What is the full form of CPU?</p>
+                <input type="radio" name="q4" value="0"> Central Program Utility<br>
+                <input type="radio" name="q4" value="1"> Computer Personal Unit<br>
+                <input type="radio" name="q4" value="2"> Central Processing Unit<br>
+                <input type="radio" name="q4" value="3"> Control Processing User
+            </div>
+
+            <div class="question">
+                <p>5. Which one is a JavaScript data type?</p>
+                <input type="radio" name="q5" value="0"> Integer only<br>
+                <input type="radio" name="q5" value="1"> Boolean<br>
+                <input type="radio" name="q5" value="2"> Character only<br>
+                <input type="radio" name="q5" value="3"> Float only
+            </div>
+
+            <button type="button" onclick="submitExam()">
+                Submit Exam
+            </button>
+
+        </form>
+    </section>
+
+    <!-- RESULT PAGE -->
+    <section id="result" style="display:none">
+        <h1>Examination Result</h1>
+        <h2 id="studentResult"></h2>
+        <h2 id="score"></h2>
+        <h2 id="percentage"></h2>
+        <button onclick="location.reload()">Back to Login</button>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
